@@ -449,7 +449,7 @@ function addMessage(text, isUser, isOutOfScope, sources) {
     const sourceBox = document.createElement('div');
     sourceBox.className = 'source-box';
     const preview = sources[0].content ? sources[0].content.substring(0, 120).trim() + '...' : 'Previously answered Wahed Shariah client query';
-sourceBox.innerHTML = '<strong>&#128218; Source:</strong> ' + preview;
+    sourceBox.innerHTML = '<strong>&#128218; Source:</strong> ' + preview;
     wrapper.appendChild(sourceBox);
   }
 
