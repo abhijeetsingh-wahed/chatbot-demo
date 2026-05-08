@@ -448,7 +448,8 @@ function addMessage(text, isUser, isOutOfScope, sources) {
   if (!isUser && !isOutOfScope && sources && sources.length > 0) {
     const sourceBox = document.createElement('div');
     sourceBox.className = 'source-box';
-    sourceBox.innerHTML = '<strong>&#128218; Source:</strong> Based on a previously answered Wahed Shariah client query.';
+    const preview = sources[0].content ? sources[0].content.substring(0, 120).trim() + '...' : 'Previously answered Wahed Shariah client query';
+sourceBox.innerHTML = '<strong>&#128218; Source:</strong> ' + preview;
     wrapper.appendChild(sourceBox);
   }
 
